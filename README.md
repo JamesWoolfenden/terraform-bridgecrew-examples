@@ -1,6 +1,5 @@
 # Terraform Bridgecrew Examples
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-bridgecrew-examples/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-bridgecrew-examples)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-bridgecrew-examples.svg)](https://github.com/JamesWoolfenden/terraform-bridgecrew-examples/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-bridgecrew-examples.svg?label=latest)](https://github.com/JamesWoolfenden/terraform--http-ip/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
