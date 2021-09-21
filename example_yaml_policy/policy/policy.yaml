@@ -1,0 +1,22 @@
+---
+metadata:
+  name: "example yaml policy"
+  guidelines: "This should have a good guideline"
+  category: "general"
+  severity: "high"
+scope:
+  provider: "aws"
+definition:
+  or:
+    - cond_type: "attribute"
+      resource_types:
+      - "aws_instance"
+      attribute: "instance_type"
+      operator: "equals"
+      value: "t3.micro"
+    - cond_type: "attribute"
+      resource_types:
+      - "aws_instance"
+      attribute: "instance_type"
+      operator: "equals"
+      value: "t3.nano"
