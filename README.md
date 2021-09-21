@@ -33,6 +33,8 @@ Demonstrates how to create a basic policy in Terraform.
 
 Demonstrates how to create a yaml policy in Terraform.
 
+Each Folder has a video walkthrough.
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
@@ -73,7 +75,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-brid
 
 ## Copyrights
 
-Copyright © 2019-2021 James Woolfenden
+Copyright © 2021 Palo Alto Networks
 
 ## License
 
