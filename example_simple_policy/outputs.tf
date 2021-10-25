@@ -1,4 +1,4 @@
 
 output "policy" {
-  value = bridgecrew_policy.new
+  value = bridgecrew_simple_policy.new
 }

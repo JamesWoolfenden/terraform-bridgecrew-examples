@@ -12,9 +12,9 @@ These early examples show how to use terraform to extract data from the bridgecr
 
 ## example_provider/
 
-How to set-up the provider and auth.
+How to set-up the provider and authentication.
 
-Add your bridgecrew api key as an Env var:
+Add your bridgecrew API key as an Environmental variable:
 
 ```bash
 export BRIDGECREW_API="xxxx"
@@ -32,7 +32,7 @@ Demonstrates how to create a basic policy in Terraform.
 
 Demonstrates how to create a yaml policy in Terraform.
 
-Each Folder has a video walkthrough.
+Each Folder has a video walk-through.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
