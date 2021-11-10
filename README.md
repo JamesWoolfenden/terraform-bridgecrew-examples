@@ -37,7 +37,7 @@ Each Folder has a video walk-through.
 ## example_connected/
 
 This examples shows you how to create a policy and then using it against some IaC.
-1. Check a Terraform template against your current policy set, buy running the Make target fail:
+Check a Terraform template against your current policy set, buy running the Make target fail:
 
 ```bash
 make fail
