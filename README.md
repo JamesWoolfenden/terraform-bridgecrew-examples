@@ -34,6 +34,52 @@ Demonstrates how to create a yaml policy in Terraform.
 
 Each Folder has a video walk-through.
 
+## example_connected
+
+This examples show you creating a policy and then using it again some IaC.
+Check a terraform template against your current policy set:
+
+```bash
+make fail
+```
+
+Then we'll add a new policy that checks the instance size of a aws_instance resource is "t3.micro".
+
+```bash
+make policy
+```
+
+Once the policy is deployed you can test it again with:
+
+```bash
+make fail 
+```
+
+And you should see:
+
+```bash
+Check: james_aws_1636551748078: "Ensure Developers use the AWS free tier"
+        FAILED for resource: aws_instance.non_compliant
+        File: /aws_instance.non_compliant.tf:18-27
+
+                18 | resource "aws_instance" "non_compliant" {
+                19 |    # checkov:skip=CKV_AWS_79: ADD REASON
+                20 |   ami           = data.aws_ami.ubuntu.id
+                21 |   instance_type = "t3.medium"
+                22 |     root_block_device {
+                23 |     encrypted = true
+                24 |   }
+                25 |   monitoring = true
+                26 |   ebs_optimized = true
+                27 | }
+```
+
+Remove the added check with :
+
+```bash
+make destroy
+```
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
