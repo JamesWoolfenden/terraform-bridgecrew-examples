@@ -36,26 +36,27 @@ Each Folder has a video walk-through.
 
 ## example_connected
 
-This examples show you creating a policy and then using it again some IaC.
-Check a terraform template against your current policy set:
+This examples shows you how to create a policy and then using it against some IaC.
+1. Check a Terraform template against your current policy set, buy running the Make target fail:
 
 ```bash
 make fail
 ```
+This template would provision an aws_instance of the instance_type *t3.medium*.
 
-Then we'll add a new policy that checks the instance size of a aws_instance resource is "t3.micro".
+Then we add a new policy that checks that the instance size of the aws_instance resource is "t3.micro", run the Make Target policy:
 
 ```bash
 make policy
 ```
 
-Once the policy is deployed you can test it again with:
+Once the policy is deployed you can test it again with previous Make fail target:
 
 ```bash
 make fail 
 ```
 
-And you should see:
+And you should see (In your Checkov output):
 
 ```bash
 Check: james_aws_1636551748078: "Ensure Developers use the AWS free tier"
@@ -74,11 +75,12 @@ Check: james_aws_1636551748078: "Ensure Developers use the AWS free tier"
                 27 | }
 ```
 
-Remove the added check with :
+Finally remove the added check with target destroy:
 
 ```bash
 make destroy
 ```
+
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
