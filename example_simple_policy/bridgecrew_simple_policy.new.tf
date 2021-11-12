@@ -5,15 +5,19 @@ resource "bridgecrew_simple_policy" "new" {
   title          = "my first simple policy ${random_string.new.id}"
   severity       = "critical"
   category       = "logging"
-  conditions {
-    resource_types = ["aws_s3_bucket", "aws_instance"]
-    cond_type      = "attribute"
-    attribute      = "bucket"
-    operator       = "not_equals"
-    value          = "jimbo"
-  }
+  frameworks     = ["Terraform"]
 
-  guidelines = "This should explain a little"
+  conditions = jsonencode({
+    "value" : "t3.micro",
+    "operator" : "equals",
+    "attribute" : "instance_type",
+    "cond_type" : "attribute",
+    "resource_types" : [
+      "aws_instance"
+    ]
+  })
+
+  guidelines = "This should explain a bit little more than 50 chars"
 
   benchmarks {
     cis_aws_v12 = ["1.1", "2.1"]
