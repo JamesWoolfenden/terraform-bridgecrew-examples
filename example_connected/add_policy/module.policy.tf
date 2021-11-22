@@ -1,6 +1,6 @@
 module "policy" {
   source         = "JamesWoolfenden/simplepolicy/bridgecrew"
-  version        = "0.0.5"
+  version        = "0.0.9"
   frameworks     = var.frameworks
   guidelines     = var.guidelines
   conditions     = var.conditions
