@@ -7,15 +7,15 @@ resource "bridgecrew_simple_policy" "new" {
   category       = "logging"
   frameworks     = ["Terraform"]
 
-  conditions = jsonencode({
-    "value" : "t3.micro",
-    "operator" : "equals",
-    "attribute" : "instance_type",
-    "cond_type" : "attribute",
-    "resource_types" : [
+  conditions  {
+    value = "t3.micro"
+    operator= "equals"
+    attribute= "instance_type"
+    cond_type= "attribute"
+    resource_types= [
       "aws_instance"
     ]
-  })
+  }
 
   guidelines = "This should explain a bit little more than 50 chars"
 
