@@ -2,8 +2,11 @@ POLICYDIR=add_policy
 
 clean: 
 	-rm -fr $(POLICYDIR)/.terraform
+	-rm -fr $(POLICYDIR)/.terraform.lock.hcl
 	-rm -fr compliant/.terraform
+	-rm -fr compliant/.terraform.lock.hcl
 	-rm -fr non_compliant/.terraform
+	-rm -fr non_compliant/.terraform.lock.hcl
 
 policy: clean
 	cd $(POLICYDIR) && terraform init
