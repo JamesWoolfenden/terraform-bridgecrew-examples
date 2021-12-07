@@ -1,6 +1,6 @@
 resource "bridgecrew_complex_policy" "new" {
   cloud_provider = "aws"
-  title          = "my second test also neeeds to be long enough"
+  title          = "my second test also needs to be long enough"
   severity       = "critical"
   category       = "logging"
   frameworks     = ["Terraform"]

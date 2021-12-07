@@ -1,10 +1,15 @@
 POLICYDIR=add_policy
 
-policy:
+clean: 
+	-rm -fr $(POLICYDIR)/.terraform
+	-rm -fr compliant/.terraform
+	-rm -fr non_compliant/.terraform
+
+policy: clean
 	cd $(POLICYDIR) && terraform init
 	cd $(POLICYDIR) && terraform apply --auto-approve
 
-pass:
+pass: clean
 	checkov -d compliant/ --bc-api-key $(BRIDGECREW_API) --repo-id james/dynamictest
 
 fail:
