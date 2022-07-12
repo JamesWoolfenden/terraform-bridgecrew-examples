@@ -22,7 +22,7 @@ export BRIDGECREW_API="xxxx"
 
 ## example_data/
 
-Demonstrates the 3 current data sources for repositories, policies and suppressions.
+Demonstrates the 6 of the current data sources for repositories, policies, suppressions and the newer authors,incidents and justifications.
 
 ## example_simple_policy/
 
@@ -42,6 +42,7 @@ Check a Terraform template against your current policy set, buy running the Make
 ```bash
 make fail
 ```
+
 This template would provision an aws_instance of the instance_type *t3.medium*.
 
 Then we add a new policy that checks that the instance size of the aws_instance resource is "t3.micro", run the Make Target policy:
@@ -81,6 +82,9 @@ Finally remove the added check with target destroy:
 make destroy
 ```
 
+## example tag
+
+This example shows how to define a tag rule for the platform.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
