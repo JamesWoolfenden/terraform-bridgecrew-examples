@@ -126,7 +126,7 @@ Please use the [issue tracker](https://github.com/JamesWoolfenden/terraform-brid
 
 ## Copyrights
 
-Copyright © 2021 James Woolfenden
+Copyright © 2021-2022 James Woolfenden
 
 ## License
 
